@@ -1,0 +1,131 @@
+body {
+  background-color: #090d16;
+  color: #f3f4f6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 70px 20px;
+  background: radial-gradient(circle, #111c30 0%, #090d16 100%);
+  border-bottom: 2px solid #d4af37;
+}
+
+.hero-section h1 {
+  font-size: 2.8rem;
+  color: #d4af37;
+  margin-bottom: 12px;
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+.hero-section p { color: #9ca3af; font-size: 1.2rem; }
+
+.cosmos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cosmos-card {
+  background-color: #101726;
+  border: 1px solid #1e293b;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 330px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  transition: all 0.4s ease;
+}
+
+/* ستایلێ وێنەیێ سەرەکی د ناڤ کارتان دا */
+.card-img-element {
+  width: 100%;
+  height: 190px;
+  object-fit: cover; /* بۆ هندێ وێنە درێژ یان پان نەبیت و جوان دابر بگریت */
+  transition: transform 0.4s ease;
+}
+
+.cosmos-card:hover {
+  border-color: #d4af37;
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.15);
+}
+
+.cosmos-card:hover .card-img-element {
+  transform: scale(1.05); /* زۆمکرنا وێنەی ب نەرمی */
+}
+
+.card-content { padding: 25px; }
+.card-content h3 { margin: 0 0 12px 0; color: #ffffff; font-size: 1.3rem; }
+.card-content p { color: #9ca3af; font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px; }
+
+.read-btn {
+  display: block;
+  background-color: #162238;
+  color: #d4af37;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  border: 1px solid #d4af37;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.read-btn:hover { background-color: #d4af37; color: #090d16; }
+
+/* 🌟 ستایلێ لاپەڕەیێن ناوخۆ یێن فەرمی */
+.article-container {
+  max-width: 750px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #101726;
+  border-radius: 25px;
+  border: 1px solid #1e293b;
+  line-height: 1.9;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.article-container h2 { color: #d4af37; font-size: 2.2rem; margin-top: 0; border-bottom: 1px solid #1e293b; padding-bottom: 15px; }
+
+/* ستایلێ وێنەیێن ناڤ لاپەڕەیێن ناوخۆ */
+.article-img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: 20px 0;
+  border: 1px solid #1e293b;
+}
+
+.quran-box {
+  background-color: #162238;
+  border-right: 5px solid #d4af37;
+  padding: 25px;
+  border-radius: 12px;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.arabic-verse { font-size: 1.6rem; color: #d4af37; margin-bottom: 15px; font-weight: bold; }
+.kurdish-translation { color: #cbd5e1; font-size: 1.05rem; }
+
+.explanation-section h3 { color: #38bdf8; font-size: 1.4rem; margin-top: 30px; }
+.explanation-section ul { padding-right: 20px; }
+.explanation-section li { margin-bottom: 15px; color: #e5e7eb; }
+
+.back-link { display: inline-block; margin-top: 30px; color: #9ca3af; text-decoration: none; font-weight: bold; }
+.back-link:hover { color: #d4af37; }
+.bg-iron { background-image: linear-gradient(45deg, #475569, #334155); }
+
+.sor {
+  font-width: bold;
+  color: rgb(255, 38, 38);
+  background-color: #460000;
+}
