@@ -6,6 +6,45 @@ body {
   padding: 0;
 }
 
+.ticker-container {
+  width: 100%;
+  overflow: hidden; /* ڕێگریێ دکەت کو نڤێسین دەرڤەی شاشێ تێکبچیت */
+  white-space: nowrap;
+  background-color: #111c30; /* ڕەنگێ پاشبنەمایێ (تۆخ) */
+  padding: 10px 0;
+  
+}
+
+.ticker-text {
+  display: inline-block;
+  color: #fdc406; /* ڕەنگێ نڤێسینێ (سپی) */
+  font-size: 20px;
+  font-family: sans-serif;
+  margin: 0;
+  padding-left: 100%; /* نڤێسینێ پاڵدەتە دەرڤەی شاشێ ل لایێ ڕاستێ پێش دەستپێکرنێ */
+  animation: ticker-move 59s linear infinite;
+
+}
+
+@keyframes ticker-move {
+  0% {
+    transform: translate3d(0, 0, 0); /* دەستپێکرن ژ لایێ ڕاستێ یێ دەرڤەی شاشێ */
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0); /* ب تەمامی بەرزەبوون ل لایێ چەپێ */
+  }
+}
+
+/* ل ڤێرە ئەنیمەیشنێ پێناسە دکەین */
+@keyframes ticker {
+  0% {
+    transform: translateX(100%); /* دەستپێکرن ژ دەرڤەی شاشێ ل لایێ ڕاستێ */
+  }
+  100% {
+    transform: translateX(-100%); /* بڕین د ناڤ شاشێ دا بۆ لایێ چەپێ */
+  }
+}
+
 .hero-section {
   text-align: center;
   padding: 70px 20px;
