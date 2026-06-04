@@ -167,4 +167,62 @@ body {
   font-width: bold;
   color: rgb(255, 38, 38);
   background-color: #460000;
+  
+}
+/* ===== ستایلێ نوو بۆ گواستنا زڤڕینێ بۆ پشت کارتان ===== */
+.space-section {
+  position: relative;
+  padding: 6rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  direction: rtl;
+}
+
+.cosmos-container {
+  position: relative;
+  z-index: 2; /* بۆ هندێ کارت ل سەر ئەڵقەیان بن */
+}
+
+/* ===== ئەڵقە و خولگەیێن ل پشت کاردان ===== */
+.space-orbits {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1; /* ل پشت کارتێن تە دێ مینیت */
+}
+
+.orbit-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px dashed rgba(212, 160, 23, 0.08); /* هێڵەکا کز و جوان بۆ خولگەیی */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* قەبارە و خێراییا زڤڕینێ */
+.ring-1 { width: 480px; height: 480px; animation: orbit-spin 20s linear infinite; }
+.ring-2 { width: 800px; height: 800px; animation: orbit-spin 35s linear infinite reverse; }
+.ring-3 { width: 1150px; height: 1150px; animation: orbit-spin 55s linear infinite; }
+
+.planet {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+}
+.ring-1 .planet { color: #D4A017; filter: drop-shadow(0 0 8px #D4A017); }
+
+/* ئەنیمەیشنا زڤڕینا هەساران */
+@keyframes orbit-spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
 }
