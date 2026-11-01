@@ -1,228 +1,588 @@
+
+/* =========================
+   GENERAL
+   ========================= */
+
 body {
-  background-color: #090d16;
-  color: #f3f4f6;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
+    background-color: #090d16;
+    color: #f3f4f6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.ticker-container {
-  width: 100%;
-  overflow: hidden; /* ڕێگریێ دکەت کو نڤێسین دەرڤەی شاشێ تێکبچیت */
-  white-space: nowrap;
-  background-color: #111c30; /* ڕەنگێ پاشبنەمایێ (تۆخ) */
-  padding: 10px 0;
-  
-}
 
-.ticker-text {
-  display: inline-block;
-  color: #fdc406; /* ڕەنگێ نڤێسینێ (سپی) */
-  font-size: 20px;
-  font-family: sans-serif;
-  margin: 0;
-  padding-left: 100%; /* نڤێسینێ پاڵدەتە دەرڤەی شاشێ ل لایێ ڕاستێ پێش دەستپێکرنێ */
-  animation: ticker-move 59s linear infinite;
-
-}
-
-@keyframes ticker-move {
-  0% {
-    transform: translate3d(0, 0, 0); /* دەستپێکرن ژ لایێ ڕاستێ یێ دەرڤەی شاشێ */
-  }
-  100% {
-    transform: translate3d(-100%, 0, 0); /* ب تەمامی بەرزەبوون ل لایێ چەپێ */
-  }
-}
-
-/* ل ڤێرە ئەنیمەیشنێ پێناسە دکەین */
-@keyframes ticker {
-  0% {
-    transform: translateX(100%); /* دەستپێکرن ژ دەرڤەی شاشێ ل لایێ ڕاستێ */
-  }
-  100% {
-    transform: translateX(-100%); /* بڕین د ناڤ شاشێ دا بۆ لایێ چەپێ */
-  }
-}
+/* =========================
+   HERO SECTION
+   ========================= */
 
 .hero-section {
-  text-align: center;
-  padding: 70px 20px;
-  background: radial-gradient(circle, #111c30 0%, #090d16 100%);
-  border-bottom: 2px solid #d4af37;
+    text-align: center;
+    padding: 0.5px 20px;
+    background: radial-gradient(circle, #111c30 0%, #090d16 100%);
+    border-bottom: 2px solid #d4af37;
 }
 
 .hero-section h1 {
-  font-size: 2.8rem;
-  color: #d4af37;
-  margin-bottom: 12px;
-  text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    font-size: 2.8rem;
+    color: #d4af37;
+    margin-bottom: 12px;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
 }
 
-.hero-section p { color: #9ca3af; font-size: 1.2rem; }
+.hero-section p {
+    color: #9ca3af;
+    font-size: 1.2rem;
+}
+
+
+/* =========================
+   SPACE SECTION
+   ========================= */
+
+.space-section {
+    position: relative;
+    padding: 6rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    direction: rtl;
+}
+
+
+/* =========================
+   COSMOS CONTAINER
+   ========================= */
 
 .cosmos-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 35px;
-  padding: 50px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 35px;
+
+    padding: 50px 20px;
+
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
+
+/* =========================
+   COSMOS CARDS
+   ========================= */
 
 .cosmos-card {
-  background-color: #101726;
-  border: 1px solid #1e293b;
-  border-radius: 20px;
-  overflow: hidden;
-  width: 330px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
-  transition: all 0.4s ease;
-}
+    background-color: #101726;
 
-/* ستایلێ وێنەیێ سەرەکی د ناڤ کارتان دا */
-.card-img-element {
-  width: 100%;
-  height: 190px;
-  object-fit: cover; /* بۆ هندێ وێنە درێژ یان پان نەبیت و جوان دابر بگریت */
-  transition: transform 0.4s ease;
+    border: 1px solid #1e293b;
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    width: 330px;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+
+    transition: all 0.4s ease;
 }
 
 .cosmos-card:hover {
-  border-color: #d4af37;
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.15);
+    border-color: #d4af37;
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.15);
+}
+
+
+/* =========================
+   CARD IMAGE
+   ========================= */
+
+.card-img-element {
+    width: 100%;
+    height: 190px;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
 }
 
 .cosmos-card:hover .card-img-element {
-  transform: scale(1.05); /* زۆمکرنا وێنەی ب نەرمی */
+    transform: scale(1.05);
 }
 
-.card-content { padding: 25px; }
-.card-content h3 { margin: 0 0 12px 0; color: #ffffff; font-size: 1.3rem; }
-.card-content p { color: #9ca3af; font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px; }
+
+/* =========================
+   CARD CONTENT
+   ========================= */
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    margin: 0 0 12px 0;
+
+    color: #ffffff;
+    font-size: 1.3rem;
+}
+
+.card-content p {
+    color: #9ca3af;
+
+    font-size: 0.95rem;
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   READ BUTTON
+   ========================= */
 
 .read-btn {
-  display: block;
-  background-color: #162238;
-  color: #d4af37;
-  padding: 12px;
-  border-radius: 12px;
-  font-weight: bold;
-  font-size: 0.95rem;
-  border: 1px solid #d4af37;
-  text-decoration: none;
-  text-align: center;
-  transition: all 0.3s ease;
+    display: block;
+
+    background-color: #162238;
+    color: #d4af37;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+    font-size: 0.95rem;
+
+    border: 1px solid #d4af37;
+
+    text-decoration: none;
+    text-align: center;
+
+    transition: all 0.3s ease;
 }
 
-.read-btn:hover { background-color: #d4af37; color: #090d16; }
+.read-btn:hover {
+    background-color: #d4af37;
+    color: #090d16;
+}
 
-/* 🌟 ستایلێ لاپەڕەیێن ناوخۆ یێن فەرمی */
+
+/* =========================
+   ARTICLE PAGE
+   ========================= */
+
 .article-container {
-  max-width: 750px;
-  margin: 60px auto;
-  padding: 40px;
-  background-color: #101726;
-  border-radius: 25px;
-  border: 1px solid #1e293b;
-  line-height: 1.9;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    max-width: 750px;
+
+    margin: 60px auto;
+    padding: 40px;
+
+    background-color: #101726;
+
+    border-radius: 25px;
+    border: 1px solid #1e293b;
+
+    line-height: 1.9;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
 
-.article-container h2 { color: #d4af37; font-size: 2.2rem; margin-top: 0; border-bottom: 1px solid #1e293b; padding-bottom: 15px; }
+.article-container h2 {
+    color: #d4af37;
 
-/* ستایلێ وێنەیێن ناڤ لاپەڕەیێن ناوخۆ */
+    font-size: 2.2rem;
+
+    margin-top: 0;
+
+    border-bottom: 1px solid #1e293b;
+
+    padding-bottom: 15px;
+}
+
+
+/* =========================
+   ARTICLE IMAGE
+   ========================= */
+
 .article-img {
-  width: 100%;
-  max-height: 350px;
-  object-fit: cover;
-  border-radius: 15px;
-  margin: 20px 0;
-  border: 1px solid #1e293b;
+    width: 100%;
+
+    max-height: 350px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    margin: 20px 0;
+
+    border: 1px solid #1e293b;
 }
+
+
+/* =========================
+   QURAN BOX
+   ========================= */
 
 .quran-box {
-  background-color: #162238;
-  border-right: 5px solid #d4af37;
-  padding: 25px;
-  border-radius: 12px;
-  margin: 30px 0;
-  text-align: center;
+    background-color: #162238;
+
+    border-right: 5px solid #d4af37;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    margin: 30px 0;
+
+    text-align: center;
 }
 
-.arabic-verse { font-size: 1.6rem; color: #d4af37; margin-bottom: 15px; font-weight: bold; }
-.kurdish-translation { color: #cbd5e1; font-size: 1.05rem; }
+.arabic-verse {
+    font-size: 1.6rem;
 
-.explanation-section h3 { color: #38bdf8; font-size: 1.4rem; margin-top: 30px; }
-.explanation-section ul { padding-right: 20px; }
-.explanation-section li { margin-bottom: 15px; color: #e5e7eb; }
+    color: #d4af37;
 
-.back-link { display: inline-block; margin-top: 30px; color: #9ca3af; text-decoration: none; font-weight: bold; }
-.back-link:hover { color: #d4af37; }
-.bg-iron { background-image: linear-gradient(45deg, #475569, #334155); }
+    margin-bottom: 15px;
+
+    font-weight: bold;
+}
+
+.kurdish-translation {
+    color: #cbd5e1;
+    font-size: 1.05rem;
+}
+
+
+/* =========================
+   EXPLANATION SECTION
+   ========================= */
+
+.explanation-section h3 {
+    color: #38bdf8;
+
+    font-size: 1.4rem;
+
+    margin-top: 30px;
+}
+
+.explanation-section ul {
+    padding-right: 20px;
+}
+
+.explanation-section li {
+    margin-bottom: 15px;
+    color: #e5e7eb;
+}
+
+
+/* =========================
+   BACK LINK
+   ========================= */
+
+.back-link {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    color: #9ca3af;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.back-link:hover {
+    color: #d4af37;
+}
+
+
+/* =========================
+   OTHER STYLES
+   ========================= */
+
+.bg-iron {
+    background-image: linear-gradient(45deg, #475569, #334155);
+}
 
 .sor {
-  font-width: bold;
-  color: rgb(255, 38, 38);
-  background-color: #460000;
-  
-}
-/* ===== ستایلێ نوو بۆ گواستنا زڤڕینێ بۆ پشت کارتان ===== */
-.space-section {
-  position: relative;
-  padding: 6rem 2rem;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  direction: rtl;
+    font-width: bold;
+    color: rgb(255, 38, 38);
+    background-color: #460000;
 }
 
-.cosmos-container {
-  position: relative;
-  z-index: 2; /* بۆ هندێ کارت ل سەر ئەڵقەیان بن */
-}
 
-/* ===== ئەڵقە و خولگەیێن ل پشت کاردان ===== */
+/* =========================
+   SPACE ORBITS
+   ========================= */
+
 .space-orbits {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1; /* ل پشت کارتێن تە دێ مینیت */
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    z-index: 1;
 }
 
 .orbit-ring {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border: 1px dashed rgba(212, 160, 23, 0.08); /* هێڵەکا کز و جوان بۆ خولگەیی */
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    border: 1px dashed rgba(212, 160, 23, 0.08);
+
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
 }
 
-/* قەبارە و خێراییا زڤڕینێ */
-.ring-1 { width: 480px; height: 480px; animation: orbit-spin 20s linear infinite; }
-.ring-2 { width: 800px; height: 800px; animation: orbit-spin 35s linear infinite reverse; }
-.ring-3 { width: 1150px; height: 1150px; animation: orbit-spin 55s linear infinite; }
+
+/* ORBIT SIZES */
+
+.ring-1 {
+    width: 480px;
+    height: 480px;
+
+    animation: orbit-spin 20s linear infinite;
+}
+
+.ring-2 {
+    width: 800px;
+    height: 800px;
+
+    animation: orbit-spin 35s linear infinite reverse;
+}
+
+.ring-3 {
+    width: 1150px;
+    height: 1150px;
+
+    animation: orbit-spin 55s linear infinite;
+}
+
+
+/* PLANETS */
 
 .planet {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1.5rem;
-}
-.ring-1 .planet { color: #D4A017; filter: drop-shadow(0 0 8px #D4A017); }
+    position: absolute;
 
-/* ئەنیمەیشنا زڤڕینا هەساران */
+    top: 0;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    font-size: 1.5rem;
+}
+
+.ring-1 .planet {
+    color: #D4A017;
+
+    filter: drop-shadow(0 0 8px #D4A017);
+}
+
+
+/* ORBIT ANIMATION */
+
 @keyframes orbit-spin {
-  from { transform: translate(-50%, -50%) rotate(0deg); }
-  to   { transform: translate(-50%, -50%) rotate(360deg); }
+
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+}
+
+
+/* =========================
+   SEARCH BAR
+   ========================= */
+
+.search-box {
+    position: relative;
+
+    width: 600px;
+    max-width: 90%;
+
+    margin: 40px auto;
+
+    display: flex;
+
+    direction: rtl;
+}
+
+#searchInput {
+    width: 75%;
+    height: 50px;
+
+    padding: 10px 15px;
+
+    box-sizing: border-box;
+
+    border: 2px solid white;
+    border-left: none;
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    color: white;
+
+    font-size: 18px;
+    font-family: inherit;
+}
+
+#searchInput::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#searchInput:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* SEARCH BUTTON */
+
+#searchBtn {
+    width: 25%;
+    height: 50px;
+
+    border: none;
+
+    background: white;
+
+    color: #111;
+
+    font-size: 18px;
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+#searchBtn:hover {
+    transform: translateY(-3px);
+    background: #ddd;
+}
+
+
+/* =========================
+   SEARCH RESULTS
+   ========================= */
+
+#searchResults {
+    position: absolute;
+
+    top: 55px;
+    right: 0;
+
+    width: 75%;
+
+    background: white;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    z-index: 9999;
+}
+
+
+/* SEARCH RESULT ITEM */
+
+.search-result {
+    padding: 14px;
+
+    color: #111;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    border-bottom: 1px solid #ddd;
+
+    text-align: right;
+}
+
+.search-result:hover {
+    background: #eeeeee;
+}
+
+
+/* NO RESULT */
+
+.no-result {
+    padding: 14px;
+
+    color: #777;
+
+    font-size: 17px;
+
+    text-align: center;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .space-section {
+        padding: 3rem 1rem;
+    }
+
+    .cosmos-container {
+        padding: 30px 10px;
+        gap: 25px;
+    }
+
+    .cosmos-card {
+        width: 100%;
+        max-width: 330px;
+    }
+
+    .search-box {
+        width: 90%;
+    }
+
+    #searchInput {
+        width: 70%;
+    }
+
+    #searchBtn {
+        width: 30%;
+    }
+
+    #searchResults {
+        width: 70%;
+    }
+
 }

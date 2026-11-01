@@ -1,70 +1,205 @@
+
 <!DOCTYPE html>
 <html lang="ku" dir="rtl">
 <head>
+
     <meta name="google-site-verification" content="0ibyKUi4YX2CiPbNqP6ogkcXbE5v3aJw5EBxbP2v6uo" />
+
     <meta name="keywords" content="ئیسلام و فیزیا, سەیف, زانست, islam, physics, saif.o.ibrahim">
 
-<meta name="description" content="ئیسلام و فیزیا">
+    <meta name="description" content="ئیسلام و فیزیا">
 
-<meta name="author" content="Saif.o.ibrahim">
+    <meta name="author" content="Saif.o.ibrahim">
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>زانستێ فیزیای د ئیسلامێ دا</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <script src="javascript.js" defer></script>
+
 </head>
+
 <body>
-
-
-
-    <header class="ticker-container"> 
-    <p class="ticker-text">فیزیا و زانست</p>
-</header>
-
-
-    <div class="hero-section">
-        <h1>زانستێ فیزیای د ئیسلامێ دا</h1>
-        <p>پێداچوونەکا زانستی د ناڤبەرا یاسایێن فیزیاێ و ئایەتێن قورئانا پیرۆز دا</p>
-    </div>
-
-   <section class="space-section">
     
-    <div class="space-orbits">
-        <div class="orbit-ring ring-1"><span class="planet">⚛</span></div>
-        <div class="orbit-ring ring-2"><span class="planet">🪐</span></div>
-        <div class="orbit-ring ring-3"><span class="planet">🌍</span></div>
+    <div class="hero-section">
+
+        <h1>زانستێ فیزیای د ئیسلامێ دا</h1>
+
+        <p>
+            پێداچوونەکا زانستی د ناڤبەرا یاسایێن فیزیاێ و
+            ئایەتێن قورئانا پیرۆز دا
+        </p>
+
     </div>
 
-    <div class="cosmos-container">
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        <input
+            type="search"
+            id="searchInput"
+            placeholder="گەڕیان لدیڤ بابەتان..."
+            autocomplete="off"
+        >
+
+        <button id="searchBtn">
+            گەڕان
+        </button>
+
+        <div id="searchResults"></div>
+
+    </div>
+
+
+    <section class="space-section">
+    
+        <div class="space-orbits">
+
+            <div class="orbit-ring ring-1">
+                <span class="planet">⚛</span>
+            </div>
+
+            <div class="orbit-ring ring-2">
+                <span class="planet">🪐</span>
+            </div>
+
+            <div class="orbit-ring ring-3">
+                <span class="planet">🌍</span>
+            </div>
+
+        </div>
+
+
+        <div class="cosmos-container">
         
-        <div class="cosmos-card">
-            <img src="images/a.jpg" alt="تەقینا مەزن" class="card-img-element">
-            <div class="card-content">
-                <h3>تەقینا مەزن و فرەهبوونا گەردوونی</h3>
-                <p>چەوان قورئان بەحس ل خاڵا دەست پێکا گەردوونی و کشان و بەرفرهەبوونا بەردەوام یا بۆشاییێ دکەت؟</p>
-                <a href="bigbang.html" class="read-btn">پتر بخوێنە</a>
+            <!-- CARD 1 -->
+
+            <div class="cosmos-card">
+
+                <img
+                    src="images/a.jpg"
+                    alt="تەقینا مەزن"
+                    class="card-img-element"
+                >
+
+                <div class="card-content">
+
+                    <h3>
+                        تەقینا مەزن و فرەهبوونا گەردوونی
+                    </h3>
+
+                    <p>
+                        چەوان قورئان بەحس ل خاڵا دەست پێکا گەردوونی
+                        و کشان و بەرفرهەبوونا بەردەوام یا بۆشاییێ دکەت؟
+                    </p>
+
+                    <a href="bigbang.html" class="read-btn">
+                        پتر بخوێنە
+                    </a>
+
+                </div>
+
             </div>
+
+
+            <!-- CARD 2 -->
+
+            <div class="cosmos-card">
+
+                <img
+                    src="images/b.jpg"
+                    alt="سوپەرنۆڤا"
+                    class="card-img-element"
+                >
+
+                <div class="card-content">
+
+                    <h3>
+                        مرنا ستێران ب شیوێ گولا سور
+                    </h3>
+
+                    <p>
+                        تیۆرا فیزیاێ ل سەر پەقینا ستێرێن مەزن
+                        و شێوازێ دیاربوونا وان وەک پەڕەکا گۆڵێ.
+                    </p>
+
+                    <a href="supernova.html" class="read-btn">
+                        پتر بخوێنە
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+
+            <div class="cosmos-card">
+
+                <img
+                    src="images/g.jpg"
+                    alt="هاتنا ئاسنی ژ فەزای"
+                    class="card-img-element"
+                >
+
+                <div class="card-content">
+
+                    <h3>
+                        پەیدابوون و هاتنا خار یا ئاسنی (Iron)
+                    </h3>
+
+                    <p>
+                        فیزیا فەلەکناسی چەوان پشتڕاست دکەت کو توخمێ ئاسنی
+                        ژ دەرڤەی زەڤی و د ناڤ ستێران دا هاتییە دروستکرن؟
+                    </p>
+
+                    <a href="iron.html" class="read-btn">
+                        پتر بخوێنە
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 4 -->
+
+            <div class="cosmos-card">
+
+                <img
+                    src="images/g.jpg"
+                    alt="سیرون"
+                    class="card-img-element"
+                >
+
+                <div class="card-content">
+
+                    <h3>
+                        سیرون و پەیدابوونا سیرون (Iron)
+                    </h3>
+
+                    <p>
+                        فیزیا فەلەکناسی چەوان پشتڕاست دکەت کو توخمێ ئاسنی
+                        ژ دەرڤەی زەڤی و د ناڤ ستێران دا هاتییە دروستکرن؟
+                    </p>
+
+                    <a href="siron.html" class="read-btn">
+                        پتر بخوێنە
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="cosmos-card">
-            <img src="images/b.jpg" alt="سوپەرنۆڤا" class="card-img-element">
-            <div class="card-content">
-                <h3>مرنا ستێران ب شیوێ گولا سور</h3>
-                <p>تیۆرا فیزیاێ ل سەر پەقینا ستێرێن مەزن و شێوازێ دیاربوونا وان وەک پەڕەکا گۆڵێ.</p>
-                <a href="supernova.html" class="read-btn">پتر بخوێنە</a>
-            </div>
-        </div>
+    </section>
 
-        <div class="cosmos-card">
-            <img src="images/g.jpg" alt="هاتنا ئاسنی ژ فەزای" class="card-img-element">
-            <div class="card-content">
-                <h3>پەیدابوون و هاتنا خار یا ئاسنی (Iron)</h3>
-                <p>فیزیا فەلەکناسی چەوان پشتڕاست دکەت کو توخمێ ئاسنی ژ دەرڤەی زەڤی و د ناڤ ستێران دا هاتییە دروستکرن؟</p>
-                <a href="iron.html" class="read-btn">پتر بخوێنە</a>
-            </div>
-        </div>
-
-    </div>
-
-  
 </body>
 </html>
