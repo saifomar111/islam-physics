@@ -68,7 +68,7 @@ input {
 .hero-section p {
     color: #c0c5cf;
 
-    font-size: clamp(11px, 2vw, 1.2rem);
+    font-size: clamp(9px, 2vw, 1.2rem);
 
     line-height: 2;
 
