@@ -1,14 +1,37 @@
 
 /* =========================
-   GENERAL
+   GENERAL SETTINGS
    ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background-color: #090d16;
     color: #f3f4f6;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    font-family: 'Noto Sans Arabic', Tahoma, sans-serif;
+
     margin: 0;
     padding: 0;
+
+    overflow-x: hidden;
+
+    line-height: 1.8;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+input {
+    font-family: inherit;
 }
 
 
@@ -18,21 +41,40 @@ body {
 
 .hero-section {
     text-align: center;
-    padding: 0.5px 20px;
-    background: radial-gradient(circle, #111c30 0%, #090d16 100%);
+
+    padding: 20px;
+
+    background: radial-gradient(
+        circle,
+        #111c30 0%,
+        #090d16 100%
+    );
+
     border-bottom: 2px solid #d4af37;
 }
 
 .hero-section h1 {
-    font-size: 2.8rem;
+    font-size: clamp(1.6rem, 4vw, 2.8rem);
+
     color: #d4af37;
-    margin-bottom: 12px;
+
+    margin: 10px 0 12px;
+
+    line-height: 1.6;
+
     text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
 }
 
 .hero-section p {
-    color: #9ca3af;
-    font-size: 1.2rem;
+    color: #c0c5cf;
+
+    font-size: clamp(0.95rem, 2vw, 1.2rem);
+
+    line-height: 2;
+
+    margin: 5px auto 15px;
+
+    max-width: 800px;
 }
 
 
@@ -42,12 +84,18 @@ body {
 
 .space-section {
     position: relative;
+
     padding: 6rem 2rem;
+
     min-height: 100vh;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
+
     overflow: hidden;
+
     direction: rtl;
 }
 
@@ -58,17 +106,25 @@ body {
 
 .cosmos-container {
     position: relative;
+
     z-index: 2;
 
+    width: 100%;
+
     display: flex;
+
     flex-wrap: wrap;
+
     justify-content: center;
+
+    align-items: stretch;
 
     gap: 35px;
 
     padding: 50px 20px;
 
     max-width: 1200px;
+
     margin: 0 auto;
 }
 
@@ -81,11 +137,14 @@ body {
     background-color: #101726;
 
     border: 1px solid #1e293b;
+
     border-radius: 20px;
 
     overflow: hidden;
 
-    width: 330px;
+    flex: 0 1 330px;
+
+    min-width: 0;
 
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
 
@@ -106,7 +165,10 @@ body {
    ========================= */
 
 .card-img-element {
+    display: block;
+
     width: 100%;
+
     height: 190px;
 
     object-fit: cover;
@@ -125,22 +187,38 @@ body {
 
 .card-content {
     padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    height: calc(100% - 190px);
 }
 
 .card-content h3 {
-    margin: 0 0 12px 0;
+    margin: 0 0 12px;
 
     color: #ffffff;
+
     font-size: 1.3rem;
+
+    line-height: 1.9;
+
+    overflow-wrap: break-word;
 }
 
 .card-content p {
-    color: #9ca3af;
+    color: #b4bdca;
 
     font-size: 0.95rem;
-    line-height: 1.6;
 
-    margin-bottom: 25px;
+    line-height: 2;
+
+    margin: 0 0 25px;
+
+    overflow-wrap: break-word;
 }
 
 
@@ -151,7 +229,10 @@ body {
 .read-btn {
     display: block;
 
+    margin-top: auto;
+
     background-color: #162238;
+
     color: #d4af37;
 
     padding: 12px;
@@ -159,11 +240,13 @@ body {
     border-radius: 12px;
 
     font-weight: bold;
+
     font-size: 0.95rem;
 
     border: 1px solid #d4af37;
 
     text-decoration: none;
+
     text-align: center;
 
     transition: all 0.3s ease;
@@ -171,6 +254,7 @@ body {
 
 .read-btn:hover {
     background-color: #d4af37;
+
     color: #090d16;
 }
 
@@ -180,19 +264,25 @@ body {
    ========================= */
 
 .article-container {
+    width: calc(100% - 40px);
+
     max-width: 750px;
 
     margin: 60px auto;
+
     padding: 40px;
 
     background-color: #101726;
 
     border-radius: 25px;
+
     border: 1px solid #1e293b;
 
-    line-height: 1.9;
+    line-height: 2;
 
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+
+    overflow-wrap: break-word;
 }
 
 .article-container h2 {
@@ -205,6 +295,8 @@ body {
     border-bottom: 1px solid #1e293b;
 
     padding-bottom: 15px;
+
+    line-height: 1.8;
 }
 
 
@@ -213,6 +305,8 @@ body {
    ========================= */
 
 .article-img {
+    display: block;
+
     width: 100%;
 
     max-height: 350px;
@@ -243,6 +337,8 @@ body {
     margin: 30px 0;
 
     text-align: center;
+
+    overflow-wrap: break-word;
 }
 
 .arabic-verse {
@@ -253,11 +349,16 @@ body {
     margin-bottom: 15px;
 
     font-weight: bold;
+
+    line-height: 2;
 }
 
 .kurdish-translation {
     color: #cbd5e1;
+
     font-size: 1.05rem;
+
+    line-height: 2;
 }
 
 
@@ -279,6 +380,7 @@ body {
 
 .explanation-section li {
     margin-bottom: 15px;
+
     color: #e5e7eb;
 }
 
@@ -313,8 +415,10 @@ body {
 }
 
 .sor {
-    font-width: bold;
+    font-weight: bold;
+
     color: rgb(255, 38, 38);
+
     background-color: #460000;
 }
 
@@ -356,22 +460,25 @@ body {
 /* ORBIT SIZES */
 
 .ring-1 {
-    width: 480px;
-    height: 480px;
+    width: min(480px, 65vw);
+
+    height: min(480px, 65vw);
 
     animation: orbit-spin 20s linear infinite;
 }
 
 .ring-2 {
-    width: 800px;
-    height: 800px;
+    width: min(800px, 90vw);
+
+    height: min(800px, 90vw);
 
     animation: orbit-spin 35s linear infinite reverse;
 }
 
 .ring-3 {
-    width: 1150px;
-    height: 1150px;
+    width: min(1150px, 120vw);
+
+    height: min(1150px, 120vw);
 
     animation: orbit-spin 55s linear infinite;
 }
@@ -420,25 +527,32 @@ body {
     position: relative;
 
     width: 600px;
-    max-width: 90%;
+
+    max-width: calc(100% - 40px);
 
     margin: 40px auto;
 
     display: flex;
 
     direction: rtl;
+
+    align-items: stretch;
 }
 
 #searchInput {
-    width: 75%;
-    height: 50px;
+    flex: 1;
+
+    min-width: 0;
+
+    height: 52px;
 
     padding: 10px 15px;
 
-    box-sizing: border-box;
-
     border: 2px solid white;
+
     border-left: none;
+
+    border-radius: 0 10px 10px 0;
 
     outline: none;
 
@@ -446,7 +560,8 @@ body {
 
     color: white;
 
-    font-size: 18px;
+    font-size: 17px;
+
     font-family: inherit;
 }
 
@@ -462,16 +577,20 @@ body {
 /* SEARCH BUTTON */
 
 #searchBtn {
-    width: 25%;
-    height: 50px;
+    flex: 0 0 110px;
 
-    border: none;
+    height: 52px;
+
+    border: 2px solid white;
+
+    border-radius: 10px 0 0 10px;
 
     background: white;
 
     color: #111;
 
-    font-size: 18px;
+    font-size: 17px;
+
     font-family: inherit;
 
     cursor: pointer;
@@ -480,7 +599,6 @@ body {
 }
 
 #searchBtn:hover {
-    transform: translateY(-3px);
     background: #ddd;
 }
 
@@ -492,18 +610,21 @@ body {
 #searchResults {
     position: absolute;
 
-    top: 55px;
+    top: calc(100% + 5px);
+
     right: 0;
 
-    width: 75%;
+    width: calc(100% - 110px);
 
     background: white;
 
-    border-radius: 5px;
+    border-radius: 8px;
 
     overflow: hidden;
 
     z-index: 9999;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -514,13 +635,15 @@ body {
 
     color: #111;
 
-    font-size: 17px;
+    font-size: 16px;
 
     cursor: pointer;
 
     border-bottom: 1px solid #ddd;
 
     text-align: right;
+
+    line-height: 1.8;
 }
 
 .search-result:hover {
@@ -535,54 +658,325 @@ body {
 
     color: #777;
 
-    font-size: 17px;
+    font-size: 16px;
 
     text-align: center;
 }
 
 
 /* =========================
-   MOBILE RESPONSIVE
+   TABLET
    ========================= */
 
-@media (max-width: 600px) {
-
-    .hero-section h1 {
-        font-size: 2rem;
-    }
-
-    .hero-section p {
-        font-size: 1rem;
-    }
-
-    .space-section {
-        padding: 3rem 1rem;
-    }
+@media (max-width: 900px) {
 
     .cosmos-container {
-        padding: 30px 10px;
         gap: 25px;
     }
 
     .cosmos-card {
-        width: 100%;
-        max-width: 330px;
+        flex: 0 1 300px;
     }
 
+    .space-section {
+        padding: 4rem 1.5rem;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 15px;
+    }
+
+
+    /* HERO */
+
+    .hero-section {
+        padding: 18px 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 1.65rem;
+
+        line-height: 1.8;
+    }
+
+    .hero-section p {
+        font-size: 0.95rem;
+
+        line-height: 2;
+
+        margin-bottom: 5px;
+    }
+
+
+    /* SEARCH */
+
     .search-box {
-        width: 90%;
+        width: calc(100% - 30px);
+
+        max-width: 450px;
+
+        margin: 25px auto 15px;
     }
 
     #searchInput {
-        width: 70%;
+        height: 48px;
+
+        font-size: 14px;
+
+        padding: 8px 10px;
     }
 
     #searchBtn {
-        width: 30%;
+        flex-basis: 85px;
+
+        height: 48px;
+
+        font-size: 15px;
     }
 
     #searchResults {
-        width: 70%;
+        width: calc(100% - 85px);
+    }
+
+    .search-result {
+        font-size: 14px;
+
+        padding: 12px;
+    }
+
+
+    /* SPACE SECTION */
+
+    .space-section {
+        min-height: auto;
+
+        padding: 20px 12px 50px;
+    }
+
+
+    /* CARDS CONTAINER */
+
+    .cosmos-container {
+        width: 100%;
+
+        padding: 20px 5px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 25px;
+    }
+
+
+    /* CARDS */
+
+    .cosmos-card {
+        width: 100%;
+
+        max-width: 420px;
+
+        flex: none;
+
+        border-radius: 16px;
+    }
+
+    .cosmos-card:hover {
+        transform: none;
+    }
+
+
+    /* CARD IMAGE */
+
+    .card-img-element {
+        width: 100%;
+
+        height: 200px;
+
+        object-fit: cover;
+    }
+
+    .cosmos-card:hover .card-img-element {
+        transform: none;
+    }
+
+
+    /* CARD CONTENT */
+
+    .card-content {
+        height: auto;
+
+        padding: 18px;
+    }
+
+    .card-content h3 {
+        font-size: 1.1rem;
+
+        line-height: 2;
+
+        margin-bottom: 10px;
+    }
+
+    .card-content p {
+        font-size: 0.9rem;
+
+        line-height: 2;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* READ BUTTON */
+
+    .read-btn {
+        padding: 12px;
+
+        font-size: 0.95rem;
+    }
+
+
+    /* ORBITS */
+
+    .ring-1 {
+        width: 300px;
+        height: 300px;
+    }
+
+    .ring-2 {
+        width: 500px;
+        height: 500px;
+    }
+
+    .ring-3 {
+        width: 700px;
+        height: 700px;
+    }
+
+
+    /* ARTICLE */
+
+    .article-container {
+        width: calc(100% - 24px);
+
+        margin: 25px auto;
+
+        padding: 20px 16px;
+
+        border-radius: 16px;
+
+        font-size: 0.95rem;
+
+        line-height: 2;
+    }
+
+    .article-container h2 {
+        font-size: 1.5rem;
+
+        line-height: 1.8;
+    }
+
+    .article-img {
+        max-height: 250px;
+    }
+
+
+    /* QURAN BOX */
+
+    .quran-box {
+        padding: 18px 12px;
+
+        margin: 20px 0;
+    }
+
+    .arabic-verse {
+        font-size: 1.3rem;
+
+        line-height: 2;
+    }
+
+    .kurdish-translation {
+        font-size: 0.95rem;
+
+        line-height: 2;
+    }
+
+
+    /* EXPLANATION */
+
+    .explanation-section h3 {
+        font-size: 1.2rem;
+    }
+
+    .explanation-section ul {
+        padding-right: 18px;
+    }
+
+    .explanation-section li {
+        font-size: 0.95rem;
+
+        line-height: 2;
+    }
+
+}
+
+
+/* =========================
+   VERY SMALL MOBILE
+   ========================= */
+
+@media (max-width: 360px) {
+
+    .hero-section h1 {
+        font-size: 1.4rem;
+    }
+
+    .hero-section p {
+        font-size: 0.85rem;
+    }
+
+    .cosmos-container {
+        padding: 15px 0;
+    }
+
+    .cosmos-card {
+        border-radius: 12px;
+    }
+
+    .card-img-element {
+        height: 170px;
+    }
+
+    .card-content {
+        padding: 15px;
+    }
+
+    .card-content h3 {
+        font-size: 1rem;
+    }
+
+    .card-content p {
+        font-size: 0.85rem;
+    }
+
+    #searchBtn {
+        flex-basis: 75px;
+
+        font-size: 14px;
+    }
+
+    #searchResults {
+        width: calc(100% - 75px);
     }
 
 }
